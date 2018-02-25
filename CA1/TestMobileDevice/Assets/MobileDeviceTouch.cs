@@ -112,7 +112,7 @@ public class MobileDeviceTouch : MonoBehaviour
                 #endregion
 
                 #region Scale Object
-                if (Input.touchCount == 2 && currentlySelectedObject && !wasShort())
+                if (Input.touchCount == 2 && currentlySelectedObject)
                 {
                     //Debug.Log("Scaling");
                     t = touches[0];
@@ -160,7 +160,7 @@ public class MobileDeviceTouch : MonoBehaviour
                 {
                     currentlySelectedObject.DeSelect();
                     currentlySelectedObject = possibleItem;
-                    //currentlySelectedObject.Select();
+                    currentlySelectedObject.Select();
                 }
 
                 currentlySelectedObject.transform.position = r.origin + distanceToSelectedObject * r.direction;
