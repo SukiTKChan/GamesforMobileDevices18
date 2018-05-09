@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour 
 {
+    public static GameManager Instance { get; private set; }
+    public static int Counter { get; private set; }
+
     public PlatformGenerator platformGenerator;
     private Vector3 platformStartPoint;
 
@@ -16,9 +19,11 @@ public class GameManager : MonoBehaviour
 
     public DeathMenu deathMenu;
 
+
 	// Use this for initialization
 	void Start () 
     {
+        Instance = this;
         platformStartPoint = platformGenerator.transform.position;
         playerStartPoint = player.transform.position;
         scoreManager = FindObjectOfType<ScoreManager>();
@@ -31,9 +36,17 @@ public class GameManager : MonoBehaviour
 		
 	}
 
+    public void IncrementCounter()
+    {
+        Counter++;
+        UIScript.Instance.UpdatePointsText();
+    }
     public void RestartGame()
     {
+
         scoreManager.scoreIncreasing = false;
+        PlayGameScript.AddScoreToLeaderboard(GPGSIds.leaderboard_leaderboard,Counter);
+        Counter = 0;
         player.gameObject.SetActive(false);
 
         deathMenu.gameObject.SetActive(true);

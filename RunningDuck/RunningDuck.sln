@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningDuck.CSharp", "RunningDuck.CSharp.csproj", "{92568917-7770-3723-7F05-BD6BAE16EC13}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningDuck.CSharp.Editor", "RunningDuck.CSharp.Editor.csproj", "{B8051BC9-E214-F43A-C28A-3158F9BFBA4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{92568917-7770-3723-7F05-BD6BAE16EC13}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92568917-7770-3723-7F05-BD6BAE16EC13}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92568917-7770-3723-7F05-BD6BAE16EC13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8051BC9-E214-F43A-C28A-3158F9BFBA4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8051BC9-E214-F43A-C28A-3158F9BFBA4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8051BC9-E214-F43A-C28A-3158F9BFBA4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8051BC9-E214-F43A-C28A-3158F9BFBA4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
